@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "wathe_blood_mixin",
+  "version": "${version}",
+  "name": "wathe-blood-mixin",
+  "description": "你也不想青椒在最后几天都玩不了游戏吧",
+  "authors": ["howxu"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/wathe_blood_mixin/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "cn.hwoxu.wathe_blood_mixin.client.WatheBloodFixClient"
+    ],
+    "main": [
+      "cn.hwoxu.wathe_blood_mixin.WatheBloodFix"
+    ]
+  },
+  "mixins": [
+    "wathe_blood_mixin.mixins.json",
+    {
+      "config": "wathe_blood_mixin.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
