@@ -126,8 +126,8 @@ publishing {
     publications {
         create("mavenJava", MavenPublication) {
             artifactId = project.archives_base_name
-            artifact Jar
-            artifact sourcesJar
+            artifact tasks.named('jar')
+            artifact tasks.named('sourcesJar')
         }
     }
 
